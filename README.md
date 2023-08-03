@@ -1,7 +1,6 @@
 # Pendulum Simulation
 
-<img width="1440" alt="Screenshot 2023-08-03 at 1 04 49 PM" src="https://github.com/chaggysen/SimplePendulum/assets/59708469/d3e5c6ff-7f5c-4e7f-b406-7548263c64ef">
-
+<img width="1440" alt="Screenshot 2023-08-03 at 1 04 49 PM" src="https://github.com/chaggysen/SimplePendulum/assets/59708469/fd58ba18-7029-4be3-9d37-afc835bf44ad">
 
 A simple pendulum simulation using a backend built on Node.js and a frontend visualization built with vanilla JavaScript. The backend provides an approximation of pendulum movement using the small angle approximation method.
 
