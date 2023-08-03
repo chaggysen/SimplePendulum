@@ -21,9 +21,9 @@
 .pendulum::after {
     content: '';  /* Necessary for the pseudo-element to show */
     display: block;
-    width: 40px;  /* Circle diameter, adjust as necessary */
+    width: 40px; 
     height: 40px;
-    background-color: black;  /* Circle color, adjust as necessary */
+    background-color: black; 
     border-radius: 50%;  /* Makes the shape a circle */
     position: absolute;  /* Absolute positioning to place it at the tip */
     bottom: 0;  /* Position it at the bottom of the pendulum */
@@ -47,7 +47,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif; /* Choose your preferred font */
+    font-family: Arial, sans-serif; 
     background-color: #f4f4f4;  /* Light grey background for contrast */
 }
 
