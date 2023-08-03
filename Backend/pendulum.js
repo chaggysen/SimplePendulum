@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 const cors=require("cors");
 const corsOptions ={
    origin:'*', 
-   credentials:true, //access-control-allow-credentials:true
+   credentials:true,
    optionSuccessStatus:200,
 }
 
@@ -32,7 +32,7 @@ app.post('/configure', (req, res) => {
 // Small-angle approx for simple pendulum equation
 app.get('/coordinates', (req, res) => {
     const dt = (Date.now() - pendulumState.lastTime) / 1000;
-    pendulumState.theta = smalleAngleApproximation(pendulumState.theta0, pendulumState.length, dt) //pendulumState.theta0 * Math.cos(Math.sqrt(9.81 / pendulumState.length) * dt);
+    pendulumState.theta = smalleAngleApproximation(pendulumState.theta0, pendulumState.length, dt)
     res.json(pendulumState.theta);
 });
 

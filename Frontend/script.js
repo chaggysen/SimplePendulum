@@ -37,7 +37,6 @@ function update() {
         fetch(`http://localhost:${port}/coordinates`)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 pendulums[index].style.transform = `rotate(${data}rad)`;
             });
     });
