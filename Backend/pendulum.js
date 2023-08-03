@@ -32,11 +32,20 @@ app.post('/configure', (req, res) => {
 // Small-angle approx for simple pendulum equation
 app.get('/coordinates', (req, res) => {
     const dt = (Date.now() - pendulumState.lastTime) / 1000;
-    pendulumState.theta = pendulumState.theta0 * Math.cos(Math.sqrt(9.81 / pendulumState.length) * dt);
+    pendulumState.theta = smalleAngleApproximation(pendulumState.theta0, pendulumState.length, dt) //pendulumState.theta0 * Math.cos(Math.sqrt(9.81 / pendulumState.length) * dt);
     res.json(pendulumState.theta);
 });
+
+// helper methods
+function smalleAngleApproximation(theta0, length, deltaT){
+    return theta0 * Math.cos(Math.sqrt(9.81 / length) * deltaT)
+}
 
 const port = process.argv[2] || 3000;
 app.listen(port, () => {
     console.log(`Pendulum server listening on port ${port}`);
 });
+
+module.exports = {
+    smalleAngleApproximation: smalleAngleApproximation
+};
