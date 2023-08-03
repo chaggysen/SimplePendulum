@@ -16,11 +16,10 @@ jobs:
       with:
         node-version: '14'
 
-    - name: npm install and test
-      run: |
-        npm install
-        npm test
+    - name: Install Dependencies
+      run: npm install
       working-directory: ./Backend
-
+      
     - name: Run tests
       run: npm test
+      working-directory: ./Backend
