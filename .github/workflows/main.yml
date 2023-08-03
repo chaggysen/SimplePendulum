@@ -16,11 +16,11 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Navigate to Backend directory
-      run: cd Backend
-
-    - name: Install dependencies
-      run: npm install
+    - name: npm install and test
+      run: |
+        npm install
+        npm test
+      working-directory: ./Backend
 
     - name: Run tests
       run: npm test
