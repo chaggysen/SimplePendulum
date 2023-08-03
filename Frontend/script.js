@@ -4,9 +4,7 @@ const ports = ['3000', '3001', '3002', '3003', '3004']
 function configure() {
 
     const pendulums = document.querySelectorAll('.pendulum');
-
-    ['3000', '3001', '3002', '3003', '3004'].forEach((port, index)=> {
-
+    ports.forEach((port, index)=> {
         // Input starting angle and length
         const theta0 = prompt(`Enter initial angle in radians for pendulum ${index + 1}:`, 0.1);
         const length = prompt(`Enter length in meters for pendulum ${index + 1}:`, 1);
@@ -33,7 +31,7 @@ function update() {
     if (!isRunning) return;
 
     const pendulums = document.querySelectorAll('.pendulum');
-    ['3000', '3001', '3002', '3003', '3004'].forEach((port, index) => {
+    ports.forEach((port, index) => {
         fetch(`http://localhost:${port}/coordinates`)
             .then(response => response.json())
             .then(data => {
