@@ -23,7 +23,7 @@ A simple pendulum simulation using a backend built on Node.js and a frontend vis
 
 **Request Body**:
 - `theta0`: Initial angular displacement in radians.
-- `l`: Length of the pendulum in meters.
+- `length`: Length of the pendulum in meters.
 
 **Response**: "Configured successfully."
 
