@@ -5,16 +5,8 @@
 
 A simple pendulum simulation using a backend built on Node.js and a frontend visualization built with vanilla JavaScript. The backend provides an approximation of pendulum movement using the small angle approximation method.
 
-The time-dependent angle \( \theta(t) \) for a simple pendulum, when it's displaced by a small initial angle \( \theta_0 \) and then released, is given by:
+![image](https://github.com/chaggysen/SimplePendulum/assets/59708469/d6307ea1-a234-433e-b143-c47beac61570)
 
-\[ \theta(t) = \theta_0 \cos\left(\sqrt{\frac{g}{l}} t\right) \]
-
-Where:
-- \( \theta(t) \) is the angle as a function of time.
-- \( \theta_0 \) is the initial displacement angle.
-- \( g \) is the acceleration due to gravity.
-- \( l \) is the length of the pendulum.
-- \( t \) is time.
 
 ## Table of Contents
 
