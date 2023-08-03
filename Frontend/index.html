@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendulum Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="controls">
+        <button onclick="configure()">Configure</button>
+        <button onclick="start()">Start</button>
+        <button onclick="pause()">Pause</button>
+        <button onclick="stop()">Stop</button>
+    </div>
+    <div id="pendulums">
+        <div id="bar"></div>
+        <!-- Five pendulum divs for visualization -->
+        <div class="pendulum"></div>
+        <div class="pendulum"></div>
+        <div class="pendulum"></div>
+        <div class="pendulum"></div>
+        <div class="pendulum"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

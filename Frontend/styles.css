@@ -1,0 +1,81 @@
+/* Pendulum styling */
+#pendulums {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 5px;  
+    width: 60%;  /* This will ensure pendulums take 60% of the viewport width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pendulum {
+    width: 3px;
+    height: 100px;
+    background-color: black;
+    transform-origin: top;
+    position: relative; 
+}
+
+.pendulum::after {
+    content: '';  /* Necessary for the pseudo-element to show */
+    display: block;
+    width: 40px;  /* Circle diameter, adjust as necessary */
+    height: 40px;
+    background-color: black;  /* Circle color, adjust as necessary */
+    border-radius: 50%;  /* Makes the shape a circle */
+    position: absolute;  /* Absolute positioning to place it at the tip */
+    bottom: 0;  /* Position it at the bottom of the pendulum */
+    left: 50%;  /* Centering the circle horizontally */
+    transform: translateX(-50%);  /* Further ensuring center alignment */
+}
+
+#bar {
+    background-color: gray;
+    height: 5px;
+    width: 100%;  /* Full width of the #pendulums container */
+    position: absolute;
+    top: -5px;
+    left: 0;
+}
+
+/* Additional styling for the body to center everything vertically */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif; /* Choose your preferred font */
+    background-color: #f4f4f4;  /* Light grey background for contrast */
+}
+
+/* Styling for the controls container */
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;  /* More space from pendulums */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;  /* White background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+/* Styling for individual buttons */
+#controls button {
+    padding: 10px 20px;  /* Vertical and horizontal padding */
+    margin: 0 10px;  /* Space between buttons */
+    border: none;  /* Remove default border */
+    border-radius: 5px;  /* Rounded corners */
+    background-color: #007BFF;  /* Blue background */
+    color: #fff;  /* White text color */
+    cursor: pointer;  /* Hand cursor on hover */
+    font-size: 16px;  /* Font size */
+    transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+#controls button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}

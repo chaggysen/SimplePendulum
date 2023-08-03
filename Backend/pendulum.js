@@ -4,6 +4,15 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
 
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true, //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions))
+
 let pendulumState = {
     theta0: 0.1, // initial angular displacement in radians
     length: 1, // length in meters
